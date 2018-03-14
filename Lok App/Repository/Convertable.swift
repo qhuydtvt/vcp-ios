@@ -1,0 +1,20 @@
+//
+//  Convertable.swift
+//  Lok App
+//
+//  Created by Vũ Kiên on 13/03/2018.
+//  Copyright © 2018 LOK. All rights reserved.
+//
+
+import Foundation
+protocol ModelConvertable {
+    associatedtype Model
+    
+    func asDomain() -> Model
+}
+
+protocol ObjectConvertable {
+    associatedtype Object
+    
+    func asObject() -> Object
+}
