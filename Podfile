@@ -14,6 +14,7 @@ target 'Lok App' do
   pod 'ReachabilitySwift', '~> 3'
   pod 'RxDataSources'
   pod 'RealmSwift'
+  pod 'SlideMenuControllerSwift'
   # Pods for Lok App
   
   target 'Lok AppTests' do

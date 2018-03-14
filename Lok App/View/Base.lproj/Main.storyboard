@@ -14,13 +14,13 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Lok_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Lok_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHa-Gc-t79">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggN-vO-tL3">
                                         <rect key="frame" x="164.5" y="19.5" width="46" height="21"/>
@@ -28,24 +28,41 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-IQ-jea">
+                                        <rect key="frame" x="8" y="15" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29019607843137252" green="0.82352941176470584" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ggN-vO-tL3" firstAttribute="centerY" secondItem="aHa-Gc-t79" secondAttribute="centerY" id="0xC-Vy-C5y"/>
+                                    <constraint firstItem="Ela-IQ-jea" firstAttribute="centerY" secondItem="aHa-Gc-t79" secondAttribute="centerY" id="8Fp-XM-UlV"/>
+                                    <constraint firstItem="Ela-IQ-jea" firstAttribute="leading" secondItem="aHa-Gc-t79" secondAttribute="leading" constant="8" id="Pqz-Vx-Gue"/>
                                     <constraint firstItem="ggN-vO-tL3" firstAttribute="centerX" secondItem="aHa-Gc-t79" secondAttribute="centerX" id="XL4-Zj-gGj"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsL-4v-gTb">
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.82352941180000006" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="05y-dQ-maC"/>
-                            <constraint firstItem="aHa-Gc-t79" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2iU-Jh-F3U"/>
+                            <constraint firstItem="aHa-Gc-t79" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Ke-II-KL4"/>
+                            <constraint firstItem="gsL-4v-gTb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQg-px-OVH"/>
+                            <constraint firstItem="gsL-4v-gTb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NoH-Yh-WHN"/>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Qhc-lu-m6n"/>
+                            <constraint firstItem="gsL-4v-gTb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WHO-BM-Bc2"/>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZSH-aG-7eY"/>
+                            <constraint firstItem="aHa-Gc-t79" firstAttribute="top" secondItem="gsL-4v-gTb" secondAttribute="bottom" id="xKe-4C-xYA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bck-3e-dR6"/>
+                    <connections>
+                        <outlet property="menuButton" destination="Ela-IQ-jea" id="Tg1-gt-fcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

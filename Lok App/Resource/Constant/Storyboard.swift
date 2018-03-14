@@ -8,6 +8,7 @@
 
 import Foundation
 
-extension Lok.StoryBoard {
-    
+extension Lok.Storyboard {
+    static let MAIN = "Main"
+    static let MENU = "Menu"
 }

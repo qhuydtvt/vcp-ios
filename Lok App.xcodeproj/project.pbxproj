@@ -10,6 +10,9 @@
 		2250BC2699DA966C918F506F /* Pods_Lok_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E7D8B18D35B9ECF38EFCEF /* Pods_Lok_AppUITests.framework */; };
 		864A677C5C9CAFFECAF242E6 /* Pods_Lok_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DE82D56E570FBA66F3DBFF /* Pods_Lok_AppTests.framework */; };
 		B318C02DD2CED37475375925 /* Pods_Lok_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425FA77399BD9FDFD974DFBB /* Pods_Lok_App.framework */; };
+		E169B8A8205974AF00214709 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E169B8A7205974AF00214709 /* Menu.storyboard */; };
+		E169B8AB205974FE00214709 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169B8AA205974FE00214709 /* MenuViewController.swift */; };
+		E169B8AD20597CCA00214709 /* Menu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E169B8AC20597CCA00214709 /* Menu.xcassets */; };
 		E1844BB72057D1C7006854B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1844BB62057D1C7006854B8 /* AppDelegate.swift */; };
 		E1844BBC2057D1C7006854B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1844BBA2057D1C7006854B8 /* Main.storyboard */; };
 		E1844BBE2057D1C7006854B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1844BBD2057D1C7006854B8 /* Assets.xcassets */; };
@@ -65,6 +68,9 @@
 		7DDB57160A9AD5C6DC0A2FDC /* Pods-Lok App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lok App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lok App/Pods-Lok App.debug.xcconfig"; sourceTree = "<group>"; };
 		C9FCD1EB3664EC19327AA3CD /* Pods-Lok AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lok AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lok AppTests/Pods-Lok AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC0304C764006D51619D92C2 /* Pods-Lok AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lok AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lok AppUITests/Pods-Lok AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E169B8A7205974AF00214709 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		E169B8AA205974FE00214709 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E169B8AC20597CCA00214709 /* Menu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Menu.xcassets; sourceTree = "<group>"; };
 		E1844BB32057D1C7006854B8 /* Lok App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lok App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1844BB62057D1C7006854B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1844BBB2057D1C7006854B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +156,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E169B8A6205974A000214709 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E169B8A7205974AF00214709 /* Menu.storyboard */,
+			);
+			path = SlideMenu;
+			sourceTree = "<group>";
+		};
+		E169B8A9205974F100214709 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E169B8AA205974FE00214709 /* MenuViewController.swift */,
+			);
+			path = SlideMenu;
+			sourceTree = "<group>";
+		};
 		E1844BAA2057D1C7006854B8 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +239,7 @@
 		E1BF23732057E57F00FC1FDE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E169B8A6205974A000214709 /* SlideMenu */,
 				E1844BBA2057D1C7006854B8 /* Main.storyboard */,
 				E1844BBF2057D1C7006854B8 /* LaunchScreen.storyboard */,
 			);
@@ -226,6 +249,7 @@
 		E1BF23742057E58500FC1FDE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E169B8A9205974F100214709 /* SlideMenu */,
 				E1BF23972057F14800FC1FDE /* Home */,
 			);
 			path = Controller;
@@ -238,6 +262,7 @@
 				E1844BBD2057D1C7006854B8 /* Assets.xcassets */,
 				E1BF237F2057EC3F00FC1FDE /* Config.plist */,
 				E1BF23952057EE2800FC1FDE /* Config.swift */,
+				E169B8AC20597CCA00214709 /* Menu.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -410,7 +435,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E169B8A8205974AF00214709 /* Menu.storyboard in Resources */,
 				E1BF23802057EC3F00FC1FDE /* Config.plist in Resources */,
+				E169B8AD20597CCA00214709 /* Menu.xcassets in Resources */,
 				E1844BC12057D1C7006854B8 /* LaunchScreen.storyboard in Resources */,
 				E1844BBE2057D1C7006854B8 /* Assets.xcassets in Resources */,
 				E1844BBC2057D1C7006854B8 /* Main.storyboard in Resources */,
@@ -559,6 +586,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -574,6 +602,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +663,7 @@
 				E1BF238E2057ED9A00FC1FDE /* View.swift in Sources */,
 				E1BF23A12057F97E00FC1FDE /* ComicRepository.swift in Sources */,
 				E1BF23942057EDEA00FC1FDE /* Storyboard.swift in Sources */,
+				E169B8AB205974FE00214709 /* MenuViewController.swift in Sources */,
 				E1BF23992057F15900FC1FDE /* HomeViewController.swift in Sources */,
 				E1BF237C2057E94D00FC1FDE /* LokError.swift in Sources */,
 				E1BF23882057ED4900FC1FDE /* Color.swift in Sources */,

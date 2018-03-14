@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="rhO-RE-IOM">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="Vdn-bW-5wk" customClass="MenuViewController" customModule="Lok_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yv9-Pk-Gy4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yb9T3524Resize1" translatesAutoresizingMaskIntoConstraints="NO" id="aj4-jY-Osw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TjU-gw-yla">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pb6-K2-GzF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pb6-K2-GzF" id="aZk-e9-aWj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="aj4-jY-Osw" firstAttribute="top" secondItem="yv9-Pk-Gy4" secondAttribute="top" id="4ME-Qb-rqf"/>
+                            <constraint firstItem="TjU-gw-yla" firstAttribute="top" secondItem="aj4-jY-Osw" secondAttribute="bottom" id="5q2-VJ-GcU"/>
+                            <constraint firstAttribute="bottom" secondItem="TjU-gw-yla" secondAttribute="bottom" id="anp-Rl-CmP"/>
+                            <constraint firstItem="TjU-gw-yla" firstAttribute="centerX" secondItem="yv9-Pk-Gy4" secondAttribute="centerX" id="ayf-gm-bnl"/>
+                            <constraint firstItem="TjU-gw-yla" firstAttribute="width" secondItem="yv9-Pk-Gy4" secondAttribute="width" id="hrg-di-PJe"/>
+                            <constraint firstItem="aj4-jY-Osw" firstAttribute="width" secondItem="yv9-Pk-Gy4" secondAttribute="width" id="l61-he-saz"/>
+                            <constraint firstItem="aj4-jY-Osw" firstAttribute="height" secondItem="yv9-Pk-Gy4" secondAttribute="height" multiplier="0.3" id="srn-pt-PZ1"/>
+                            <constraint firstItem="aj4-jY-Osw" firstAttribute="centerX" secondItem="yv9-Pk-Gy4" secondAttribute="centerX" id="uqK-HO-QUy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OJ9-tG-eyN"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="TjU-gw-yla" id="LCL-1H-UL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbz-f9-PXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.200000000000003" y="161.46926536731635"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="yb9T3524Resize1" width="375" height="140"/>
+    </resources>
+</document>

@@ -21,7 +21,7 @@ struct Lok {
     
     struct View {}
     
-    struct StoryBoard {}
+    struct Storyboard {}
     
     struct CellIdentifier {}
 }
