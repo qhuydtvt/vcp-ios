@@ -10,6 +10,6 @@ import Foundation
 
 
 extension Lok.ViewController {
-    static let HOME = "HomeViewController"
     static let MENU = "MenuViewController"
+    static let HOME_NAVIGATION = "HomeNavigationController"
 }

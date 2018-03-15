@@ -19,13 +19,28 @@ class HomeViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isHidden = true
+        self.setupUI()
         self.event()
     }
     
+    //MARK: - UI
+    fileprivate func setupUI() {
+        self.setupMenuBar()
+    }
+    
+    fileprivate func setupMenuBar() {
+        self.menuButton.setImage(self.menuButton.imageView?.image?.withRenderingMode(.alwaysTemplate), for: .normal)
+        self.menuButton.tintColor = Lok.Color.Home.MENU_TINT
+    }
     
     //MARK: - Event
     fileprivate func event() {
@@ -39,10 +54,7 @@ class HomeViewController: UIViewController {
     }
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
 }

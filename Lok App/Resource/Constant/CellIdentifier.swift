@@ -9,5 +9,6 @@
 import Foundation
 
 extension Lok.CellIdentifier {
-    
+    static let MENU = "menuCell"
+    static let IMAGE = "imageCell"
 }

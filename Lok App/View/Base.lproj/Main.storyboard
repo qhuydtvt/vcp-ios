@@ -28,9 +28,9 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-IQ-jea">
-                                        <rect key="frame" x="8" y="15" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-IQ-jea">
+                                        <rect key="frame" x="8" y="14" width="32" height="32"/>
+                                        <state key="normal" image="menu_black_icon"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.29019607843137252" green="0.82352941176470584" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,16 +45,26 @@
                                 <rect key="frame" x="-0.5" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.82352941180000006" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-1x-v7C">
+                                <rect key="frame" x="0.0" y="80" width="375" height="167"/>
+                                <connections>
+                                    <segue destination="OR4-jh-a6l" kind="embed" id="jX4-ZJ-nsV"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="05y-dQ-maC"/>
+                            <constraint firstItem="uxA-1x-v7C" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="3On-pM-QmV"/>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Ke-II-KL4"/>
                             <constraint firstItem="gsL-4v-gTb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NQg-px-OVH"/>
                             <constraint firstItem="gsL-4v-gTb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NoH-Yh-WHN"/>
+                            <constraint firstItem="uxA-1x-v7C" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="P8A-UT-Qm5"/>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Qhc-lu-m6n"/>
                             <constraint firstItem="gsL-4v-gTb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WHO-BM-Bc2"/>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZSH-aG-7eY"/>
+                            <constraint firstItem="uxA-1x-v7C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olu-ri-iia"/>
+                            <constraint firstItem="uxA-1x-v7C" firstAttribute="top" secondItem="aHa-Gc-t79" secondAttribute="bottom" id="wJB-Az-3BA"/>
                             <constraint firstItem="aHa-Gc-t79" firstAttribute="top" secondItem="gsL-4v-gTb" secondAttribute="bottom" id="xKe-4C-xYA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -71,9 +81,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Bg4-fD-ifQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Rjk-CD-kQV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Rjk-CD-kQV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iJA-w2-dyv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="iJA-w2-dyv">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -85,5 +95,68 @@
             </objects>
             <point key="canvasLocation" x="-601" y="-38"/>
         </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="hOp-mI-aPE">
+            <objects>
+                <viewController id="OR4-jh-a6l" customClass="BannerViewController" customModule="Lok_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ruH-QT-Sbz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4qM-p3-b2a">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="dV5-Vy-HY9">
+                                    <size key="itemSize" width="264" height="96"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="1gi-Oo-KVV" customClass="BannerCollectionViewCell" customModule="Lok_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35.5" width="264" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="264" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lok_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fw5-XX-0IE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="96"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="fw5-XX-0IE" firstAttribute="centerX" secondItem="1gi-Oo-KVV" secondAttribute="centerX" id="VWe-os-cCn"/>
+                                            <constraint firstItem="fw5-XX-0IE" firstAttribute="height" secondItem="1gi-Oo-KVV" secondAttribute="height" id="atI-GX-Zl6"/>
+                                            <constraint firstItem="fw5-XX-0IE" firstAttribute="centerY" secondItem="1gi-Oo-KVV" secondAttribute="centerY" id="gef-QN-NrB"/>
+                                            <constraint firstItem="fw5-XX-0IE" firstAttribute="width" secondItem="1gi-Oo-KVV" secondAttribute="width" id="oXh-3P-m9r"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="fw5-XX-0IE" id="bCu-Dh-aqK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4qM-p3-b2a" firstAttribute="width" secondItem="ruH-QT-Sbz" secondAttribute="width" id="Ke1-Ur-N6I"/>
+                            <constraint firstItem="4qM-p3-b2a" firstAttribute="centerY" secondItem="ruH-QT-Sbz" secondAttribute="centerY" id="hrW-Eu-ekT"/>
+                            <constraint firstItem="4qM-p3-b2a" firstAttribute="height" secondItem="ruH-QT-Sbz" secondAttribute="height" id="xbW-Po-kcF"/>
+                            <constraint firstItem="4qM-p3-b2a" firstAttribute="centerX" secondItem="ruH-QT-Sbz" secondAttribute="centerX" id="ydX-fT-Y46"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="4qM-p3-b2a" id="Dij-ec-z8Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KX4-fx-civ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264.8" y="-278.41079460269867"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="lok_logo" width="583" height="400"/>
+        <image name="menu_black_icon" width="32" height="32"/>
+    </resources>
 </document>

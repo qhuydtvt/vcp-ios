@@ -19,6 +19,8 @@
 		E1844BC12057D1C7006854B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1844BBF2057D1C7006854B8 /* LaunchScreen.storyboard */; };
 		E1844BCC2057D1C8006854B8 /* Lok_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1844BCB2057D1C8006854B8 /* Lok_AppTests.swift */; };
 		E1844BD72057D1C8006854B8 /* Lok_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1844BD62057D1C8006854B8 /* Lok_AppUITests.swift */; };
+		E19B51B6205A21A100CE67A5 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51B5205A21A100CE67A5 /* BannerViewController.swift */; };
+		E19B51B8205A233300CE67A5 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51B7205A233300CE67A5 /* BannerCollectionViewCell.swift */; };
 		E1BF237A2057E6D800FC1FDE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF23792057E6D800FC1FDE /* Service.swift */; };
 		E1BF237C2057E94D00FC1FDE /* LokError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF237B2057E94D00FC1FDE /* LokError.swift */; };
 		E1BF23802057EC3F00FC1FDE /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1BF237F2057EC3F00FC1FDE /* Config.plist */; };
@@ -83,6 +85,8 @@
 		E1844BD22057D1C8006854B8 /* Lok AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lok AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1844BD62057D1C8006854B8 /* Lok_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lok_AppUITests.swift; sourceTree = "<group>"; };
 		E1844BD82057D1C8006854B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E19B51B5205A21A100CE67A5 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		E19B51B7205A233300CE67A5 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1BF23792057E6D800FC1FDE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E1BF237B2057E94D00FC1FDE /* LokError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokError.swift; sourceTree = "<group>"; };
 		E1BF237F2057EC3F00FC1FDE /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -228,6 +232,30 @@
 			path = "Lok AppUITests";
 			sourceTree = "<group>";
 		};
+		E19B51B2205A217100CE67A5 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				E19B51B4205A219200CE67A5 /* Banner */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		E19B51B3205A217A00CE67A5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E19B51B7205A233300CE67A5 /* BannerCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E19B51B4205A219200CE67A5 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				E19B51B5205A21A100CE67A5 /* BannerViewController.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
 		E1BF23722057E56E00FC1FDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +342,8 @@
 		E1BF23972057F14800FC1FDE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E19B51B3205A217A00CE67A5 /* Cell */,
+				E19B51B2205A217100CE67A5 /* Item */,
 				E1BF23982057F15900FC1FDE /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -655,10 +685,12 @@
 			files = (
 				E1BF238A2057ED5A00FC1FDE /* Image.swift in Sources */,
 				E1BF239F2057F59000FC1FDE /* Comic.swift in Sources */,
+				E19B51B8205A233300CE67A5 /* BannerCollectionViewCell.swift in Sources */,
 				E1BF239D2057F4DB00FC1FDE /* Convertable.swift in Sources */,
 				E1BF23902057EDB700FC1FDE /* Controller.swift in Sources */,
 				E1BF23962057EE2800FC1FDE /* Config.swift in Sources */,
 				E1BF23A5205809BD00FC1FDE /* ComicService.swift in Sources */,
+				E19B51B6205A21A100CE67A5 /* BannerViewController.swift in Sources */,
 				E1BF239B2057F33200FC1FDE /* RealmSwift+Extension.swift in Sources */,
 				E1BF238E2057ED9A00FC1FDE /* View.swift in Sources */,
 				E1BF23A12057F97E00FC1FDE /* ComicRepository.swift in Sources */,

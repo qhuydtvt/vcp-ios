@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vdn-bW-5wk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,30 +19,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yb9T3524Resize1" translatesAutoresizingMaskIntoConstraints="NO" id="aj4-jY-Osw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lok_logo" translatesAutoresizingMaskIntoConstraints="NO" id="aj4-jY-Osw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TjU-gw-yla">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TjU-gw-yla">
+                                <rect key="frame" x="0.0" y="201" width="375" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="pb6-K2-GzF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" id="pb6-K2-GzF">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pb6-K2-GzF" id="aZk-e9-aWj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opu-AB-NUF">
+                                <rect key="frame" x="0.0" y="200" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.63137254899999995" green="0.63137254899999995" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="GCD-SU-kxg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="TjU-gw-yla" firstAttribute="top" secondItem="Opu-AB-NUF" secondAttribute="bottom" id="2Ta-Tx-Txf"/>
                             <constraint firstItem="aj4-jY-Osw" firstAttribute="top" secondItem="yv9-Pk-Gy4" secondAttribute="top" id="4ME-Qb-rqf"/>
-                            <constraint firstItem="TjU-gw-yla" firstAttribute="top" secondItem="aj4-jY-Osw" secondAttribute="bottom" id="5q2-VJ-GcU"/>
+                            <constraint firstItem="Opu-AB-NUF" firstAttribute="top" secondItem="aj4-jY-Osw" secondAttribute="bottom" id="Pan-YL-dBR"/>
                             <constraint firstAttribute="bottom" secondItem="TjU-gw-yla" secondAttribute="bottom" id="anp-Rl-CmP"/>
                             <constraint firstItem="TjU-gw-yla" firstAttribute="centerX" secondItem="yv9-Pk-Gy4" secondAttribute="centerX" id="ayf-gm-bnl"/>
+                            <constraint firstItem="Opu-AB-NUF" firstAttribute="width" secondItem="yv9-Pk-Gy4" secondAttribute="width" id="elH-vE-Akx"/>
                             <constraint firstItem="TjU-gw-yla" firstAttribute="width" secondItem="yv9-Pk-Gy4" secondAttribute="width" id="hrg-di-PJe"/>
+                            <constraint firstItem="Opu-AB-NUF" firstAttribute="centerX" secondItem="yv9-Pk-Gy4" secondAttribute="centerX" id="jrb-3s-9XX"/>
                             <constraint firstItem="aj4-jY-Osw" firstAttribute="width" secondItem="yv9-Pk-Gy4" secondAttribute="width" id="l61-he-saz"/>
                             <constraint firstItem="aj4-jY-Osw" firstAttribute="height" secondItem="yv9-Pk-Gy4" secondAttribute="height" multiplier="0.3" id="srn-pt-PZ1"/>
                             <constraint firstItem="aj4-jY-Osw" firstAttribute="centerX" secondItem="yv9-Pk-Gy4" secondAttribute="centerX" id="uqK-HO-QUy"/>
@@ -59,6 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="yb9T3524Resize1" width="375" height="140"/>
+        <image name="lok_logo" width="583" height="400"/>
     </resources>
 </document>

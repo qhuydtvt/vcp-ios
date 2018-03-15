@@ -49,11 +49,11 @@ extension AppDelegate {
         SlideMenuOptions.leftViewWidth = UIScreen.main.bounds.width * 2.0 / 3.0
         SlideMenuOptions.contentViewScale = 1.0
         let mainStoryboard = UIStoryboard(name: Lok.Storyboard.MAIN, bundle: nil)
-        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: Lok.ViewController.HOME)
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: Lok.ViewController.HOME_NAVIGATION)
         let menuStoryboard = UIStoryboard(name: Lok.Storyboard.MENU, bundle: nil)
         let menuVC = menuStoryboard.instantiateViewController(withIdentifier: Lok.ViewController.MENU)
         let slideMenuController = SlideMenuController(mainViewController: mainVC, leftMenuViewController: menuVC)
-        
+
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
     }
