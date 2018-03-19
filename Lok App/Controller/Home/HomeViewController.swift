@@ -9,21 +9,22 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Alamofire
 
 class HomeViewController: UIViewController {
     
+    //MARK: - Outlet
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var homeTabView: HomeTabBarView!
     
+    //MARK: - Properties
     fileprivate let disposeBag = DisposeBag()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    override var prefersStatusBarHidden: Bool {
-        return false
-    }
 
+    //MARK: - View State
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

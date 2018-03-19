@@ -10,4 +10,10 @@ import Foundation
 
 extension Lok.SegueIdentifier {
     
+    struct Home {}
+}
+
+extension Lok.SegueIdentifier.Home {
+    static let BANNER_EMBED = "bannerEmbed"
+    static let NEW_CONTENT_EMBED = "newContentEmbed"
 }

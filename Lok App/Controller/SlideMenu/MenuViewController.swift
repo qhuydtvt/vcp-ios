@@ -33,12 +33,13 @@ class MenuViewController: UIViewController {
     
     //MARK: - UI
     fileprivate func setupUI() {
+        self.tableView.rowHeight = 44.0
         self.menuOptions
             .asDriver()
-            .drive(self.tableView.rx.items(cellIdentifier: Lok.CellIdentifier.MENU))
+            .drive(self.tableView.rx.items(cellIdentifier: Lok.CellIdentifier.MENU, cellType: MenuTableViewCell.self))
             { (index, option, cell) in
-                cell.textLabel?.text = option.1
-                cell.imageView?.image = option.0
+                cell.iconImageView.image = option.0
+                cell.titleLabel.text = option.1
             }
             .disposed(by: self.disposeBag)
     }

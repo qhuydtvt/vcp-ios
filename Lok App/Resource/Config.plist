@@ -2,7 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>series</key>
+	<string>series/</string>
+	<key>video</key>
+	<string>video/</string>
+	<key>profile</key>
+	<string>locker/</string>
+	<key>comic</key>
+	<string>comic/</string>
 	<key>base_url</key>
-	<string>https://loktk.ml/api</string>
+	<string>https://loktk.ml/api/</string>
 </dict>
 </plist>

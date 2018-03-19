@@ -21,6 +21,9 @@
 		E1844BD72057D1C8006854B8 /* Lok_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1844BD62057D1C8006854B8 /* Lok_AppUITests.swift */; };
 		E19B51B6205A21A100CE67A5 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51B5205A21A100CE67A5 /* BannerViewController.swift */; };
 		E19B51B8205A233300CE67A5 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51B7205A233300CE67A5 /* BannerCollectionViewCell.swift */; };
+		E19B51BA205A45F100CE67A5 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51B9205A45F100CE67A5 /* Video.swift */; };
+		E19B51BC205A58CD00CE67A5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51BB205A58CD00CE67A5 /* MenuTableViewCell.swift */; };
+		E19B51BF205A6C6900CE67A5 /* HomeTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19B51BE205A6C6900CE67A5 /* HomeTabBarView.swift */; };
 		E1BF237A2057E6D800FC1FDE /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF23792057E6D800FC1FDE /* Service.swift */; };
 		E1BF237C2057E94D00FC1FDE /* LokError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF237B2057E94D00FC1FDE /* LokError.swift */; };
 		E1BF23802057EC3F00FC1FDE /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1BF237F2057EC3F00FC1FDE /* Config.plist */; };
@@ -38,9 +41,9 @@
 		E1BF239B2057F33200FC1FDE /* RealmSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF239A2057F33200FC1FDE /* RealmSwift+Extension.swift */; };
 		E1BF239D2057F4DB00FC1FDE /* Convertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF239C2057F4DB00FC1FDE /* Convertable.swift */; };
 		E1BF239F2057F59000FC1FDE /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF239E2057F59000FC1FDE /* Comic.swift */; };
-		E1BF23A12057F97E00FC1FDE /* ComicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF23A02057F97E00FC1FDE /* ComicRepository.swift */; };
-		E1BF23A32057FA0500FC1FDE /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF23A22057FA0500FC1FDE /* Database.swift */; };
+		E1BF23A32057FA0500FC1FDE /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF23A22057FA0500FC1FDE /* Repository.swift */; };
 		E1BF23A5205809BD00FC1FDE /* ComicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BF23A4205809BD00FC1FDE /* ComicService.swift */; };
+		E1C1F605205BC6F700600FD1 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1F604205BC6F700600FD1 /* VideoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		E1844BD82057D1C8006854B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E19B51B5205A21A100CE67A5 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		E19B51B7205A233300CE67A5 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		E19B51B9205A45F100CE67A5 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		E19B51BB205A58CD00CE67A5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		E19B51BE205A6C6900CE67A5 /* HomeTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarView.swift; sourceTree = "<group>"; };
 		E1BF23792057E6D800FC1FDE /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		E1BF237B2057E94D00FC1FDE /* LokError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokError.swift; sourceTree = "<group>"; };
 		E1BF237F2057EC3F00FC1FDE /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
@@ -104,9 +110,9 @@
 		E1BF239A2057F33200FC1FDE /* RealmSwift+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmSwift+Extension.swift"; sourceTree = "<group>"; };
 		E1BF239C2057F4DB00FC1FDE /* Convertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertable.swift; sourceTree = "<group>"; };
 		E1BF239E2057F59000FC1FDE /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
-		E1BF23A02057F97E00FC1FDE /* ComicRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicRepository.swift; sourceTree = "<group>"; };
-		E1BF23A22057FA0500FC1FDE /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		E1BF23A22057FA0500FC1FDE /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E1BF23A4205809BD00FC1FDE /* ComicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicService.swift; sourceTree = "<group>"; };
+		E1C1F604205BC6F700600FD1 /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E169B8AA205974FE00214709 /* MenuViewController.swift */,
+				E19B51BB205A58CD00CE67A5 /* MenuTableViewCell.swift */,
 			);
 			path = SlideMenu;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 		E19B51B2205A217100CE67A5 /* Item */ = {
 			isa = PBXGroup;
 			children = (
+				E19B51BD205A6C5800CE67A5 /* TabBar */,
 				E19B51B4205A219200CE67A5 /* Banner */,
 			);
 			path = Item;
@@ -256,10 +264,19 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		E19B51BD205A6C5800CE67A5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E19B51BE205A6C6900CE67A5 /* HomeTabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		E1BF23722057E56E00FC1FDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E1BF239E2057F59000FC1FDE /* Comic.swift */,
+				E19B51B9205A45F100CE67A5 /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +318,7 @@
 				E1BF23792057E6D800FC1FDE /* Service.swift */,
 				E1BF237B2057E94D00FC1FDE /* LokError.swift */,
 				E1BF23A4205809BD00FC1FDE /* ComicService.swift */,
+				E1C1F604205BC6F700600FD1 /* VideoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -309,8 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				E1BF239C2057F4DB00FC1FDE /* Convertable.swift */,
-				E1BF23A02057F97E00FC1FDE /* ComicRepository.swift */,
-				E1BF23A22057FA0500FC1FDE /* Database.swift */,
+				E1BF23A22057FA0500FC1FDE /* Repository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -688,14 +705,16 @@
 				E19B51B8205A233300CE67A5 /* BannerCollectionViewCell.swift in Sources */,
 				E1BF239D2057F4DB00FC1FDE /* Convertable.swift in Sources */,
 				E1BF23902057EDB700FC1FDE /* Controller.swift in Sources */,
+				E19B51BF205A6C6900CE67A5 /* HomeTabBarView.swift in Sources */,
 				E1BF23962057EE2800FC1FDE /* Config.swift in Sources */,
 				E1BF23A5205809BD00FC1FDE /* ComicService.swift in Sources */,
 				E19B51B6205A21A100CE67A5 /* BannerViewController.swift in Sources */,
 				E1BF239B2057F33200FC1FDE /* RealmSwift+Extension.swift in Sources */,
 				E1BF238E2057ED9A00FC1FDE /* View.swift in Sources */,
-				E1BF23A12057F97E00FC1FDE /* ComicRepository.swift in Sources */,
 				E1BF23942057EDEA00FC1FDE /* Storyboard.swift in Sources */,
 				E169B8AB205974FE00214709 /* MenuViewController.swift in Sources */,
+				E1C1F605205BC6F700600FD1 /* VideoService.swift in Sources */,
+				E19B51BA205A45F100CE67A5 /* Video.swift in Sources */,
 				E1BF23992057F15900FC1FDE /* HomeViewController.swift in Sources */,
 				E1BF237C2057E94D00FC1FDE /* LokError.swift in Sources */,
 				E1BF23882057ED4900FC1FDE /* Color.swift in Sources */,
@@ -704,8 +723,9 @@
 				E1BF23862057ED2D00FC1FDE /* Text.swift in Sources */,
 				E1BF238C2057ED7300FC1FDE /* SegueIdentifier.swift in Sources */,
 				E1BF23922057EDD100FC1FDE /* CellIdentifier.swift in Sources */,
-				E1BF23A32057FA0500FC1FDE /* Database.swift in Sources */,
+				E1BF23A32057FA0500FC1FDE /* Repository.swift in Sources */,
 				E1BF237A2057E6D800FC1FDE /* Service.swift in Sources */,
+				E19B51BC205A58CD00CE67A5 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

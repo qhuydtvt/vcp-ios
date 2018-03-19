@@ -7,13 +7,13 @@
 //
 
 import Foundation
-protocol ModelConvertable {
+protocol ModelConvertable: class {
     associatedtype Model
     
     func asDomain() -> Model
 }
 
-protocol ObjectConvertable {
+protocol ObjectConvertable: class {
     associatedtype Object
     
     func asObject() -> Object

@@ -12,16 +12,58 @@ import Alamofire
 import SwiftyJSON
 
 class Service {
-    var baseUrl: String {
-        get {
-            return Config.default.getUrl()
-        }
+    
+    static var shared: Service {
+        return Service()
     }
     
-    func request(url: String, method: HTTPMethod = .get, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, progressHandler: ((Double) -> Void)? = nil) -> Observable<JSON> {
+    fileprivate var baseUrl: String = ""
+    
+    fileprivate var headers: HTTPHeaders? = nil
+    
+    fileprivate var parameters: Parameters? = nil
+    
+    fileprivate var method: HTTPMethod = .get
+    
+    var progress: BehaviorSubject<Double>
+    
+    fileprivate init() {
+        self.progress = BehaviorSubject(value: 0.0)
+    }
+    
+    func setPathUrl(path: String) -> Service {
+        self.baseUrl = Config.default.getUrl() + path
+        return self
+    }
+    
+    func withHeaders(key: String, value: String) -> Service {
+        if self.headers == nil {
+            self.headers = [:]
+        }
+        self.headers?[key] = value
+        return self
+    }
+    
+    func withParameters(key: String, value: Any) -> Service {
+        if self.parameters == nil {
+            self.parameters = [:]
+        }
+        self.parameters?[key] = value
+        return self
+    }
+    
+    func method( _ method: HTTPMethod) -> Service {
+        self.method = method
+        return self
+    }
+    
+    func request() -> Observable<JSON> {
         return Observable<JSON>.create({ [weak self] (observer) -> Disposable in
-            let request = Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).downloadProgress(closure: { (progress) in
-                progressHandler?(progress.fractionCompleted)
+            let request = Alamofire.request(self?.baseUrl ?? "", method: self?.method ?? .get, parameters: self?.parameters, encoding: URLEncoding.default, headers: self?.headers).downloadProgress(closure: { (progress) in
+                self?.progress.onNext(progress.fractionCompleted)
+                if progress.fractionCompleted.isEqual(to: 1.0) {
+                    self?.progress.onCompleted()
+                }
             }).responseJSON(completionHandler: { [weak self] (response) in
                 if let json = self?.responseJSON(response) {
                     observer.onNext(json)
@@ -60,6 +102,7 @@ class Service {
         default:
             return .other("Đã xảy ra lỗi!")
         }
-        
     }
 }
+
+
